@@ -18,7 +18,7 @@ const client = await MongoClient.connect('mongodb+srv://sananoor:ZTEBJFo9OVyCXKf
   client.close();
 
   return {
-    fallback: false,
+    fallback: 'blocking',
     paths: meetups.map((meetup) => ({
       params: { meetupId: meetup._id.toString() },
     })),
