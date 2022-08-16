@@ -43,7 +43,8 @@ export async function getStaticProps(){
                 image: res.image,
                 id: res._id.toString()
             }))
-        }
+        },
+        revalidate: 1
     }
 }
 
